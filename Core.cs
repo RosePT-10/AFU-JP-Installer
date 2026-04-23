@@ -41,9 +41,20 @@ namespace JPInstaller
                 //Melon<Core>.Logger.Msg(__instance.FrameData.Count);
                 foreach (Il2CppSystem.Collections.DictionaryEntry dict in properties)
                 {
-                    string converted_string = dict.Key.Cast<Il2CppSystem.String>();
+                    string converted_string = dict.Key.ToString();
                     Melon<Core>.Logger.Msg(converted_string);
-                    Melon<Core>.Logger.Msg(dict.Value.Unbox<int>());
+
+                    switch(dict.Value.GetIl2CppType().Name){
+                        case "Int32":
+                            Melon<Core>.Logger.Msg(dict.Value.Unbox<int>());
+                            break;
+                        case "Boolean":
+                            Melon<Core>.Logger.Msg(dict.Value.Unbox<bool>());
+                            break;
+                    }
+
+                    Melon<Core>.Logger.Msg("-----------------");
+                    
                     
                 }
             }
