@@ -52,7 +52,7 @@ namespace JPInstaller
         [HarmonyPatch(typeof(PhotonController), "GetCurrentRoomProperties")]
         private static class ReadRoomProperties
         {
-            public static void Postfix(PhotonController __instance, PhotonHashtable properties)
+            public static void Postfix(PhotonController __instance)
             {
                 Melon<Core>.Logger.Msg("detected GetCurrentRoomProperties");
                 //Melon<Core>.Logger.Msg(__instance.FrameData.Count);
