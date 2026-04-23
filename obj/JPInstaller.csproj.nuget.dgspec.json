@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rosept\\Documents\\GitHub\\AFU-JP-Installer\\JPInstaller.csproj": {}
+    "E:\\Users\\rosept\\Documents\\GitHub\\AFU-JP-Installer\\JPInstaller.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rosept\\Documents\\GitHub\\AFU-JP-Installer\\JPInstaller.csproj": {
+    "E:\\Users\\rosept\\Documents\\GitHub\\AFU-JP-Installer\\JPInstaller.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rosept\\Documents\\GitHub\\AFU-JP-Installer\\JPInstaller.csproj",
+        "projectUniqueName": "E:\\Users\\rosept\\Documents\\GitHub\\AFU-JP-Installer\\JPInstaller.csproj",
         "projectName": "JPInstaller",
-        "projectPath": "C:\\Users\\rosept\\Documents\\GitHub\\AFU-JP-Installer\\JPInstaller.csproj",
-        "packagesPath": "C:\\Users\\rosept\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rosept\\Documents\\GitHub\\AFU-JP-Installer\\obj\\",
+        "projectPath": "E:\\Users\\rosept\\Documents\\GitHub\\AFU-JP-Installer\\JPInstaller.csproj",
+        "packagesPath": "C:\\Users\\taldo\\.nuget\\packages\\",
+        "outputPath": "E:\\Users\\rosept\\Documents\\GitHub\\AFU-JP-Installer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\rosept\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\taldo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
