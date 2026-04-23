@@ -11,3 +11,16 @@ D:\_AIRFRAME ULTRA\_Mods and tools\_RoseMods\AFU-JP-Installer\obj\Debug\net6.0\J
 D:\_AIRFRAME ULTRA\_Mods and tools\_RoseMods\AFU-JP-Installer\obj\Debug\net6.0\refint\JPInstaller.dll
 D:\_AIRFRAME ULTRA\_Mods and tools\_RoseMods\AFU-JP-Installer\obj\Debug\net6.0\JPInstaller.pdb
 D:\_AIRFRAME ULTRA\_Mods and tools\_RoseMods\AFU-JP-Installer\obj\Debug\net6.0\ref\JPInstaller.dll
+C:\Users\rosept\Documents\GitHub\AFU-JP-Installer\bin\Debug\net6.0\JPInstaller.deps.json
+C:\Users\rosept\Documents\GitHub\AFU-JP-Installer\bin\Debug\net6.0\JPInstaller.dll
+C:\Users\rosept\Documents\GitHub\AFU-JP-Installer\bin\Debug\net6.0\JPInstaller.pdb
+C:\Users\rosept\Documents\GitHub\AFU-JP-Installer\obj\Debug\net6.0\JPInstaller.csproj.AssemblyReference.cache
+C:\Users\rosept\Documents\GitHub\AFU-JP-Installer\obj\Debug\net6.0\JPInstaller.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rosept\Documents\GitHub\AFU-JP-Installer\obj\Debug\net6.0\JPInstaller.AssemblyInfoInputs.cache
+C:\Users\rosept\Documents\GitHub\AFU-JP-Installer\obj\Debug\net6.0\JPInstaller.AssemblyInfo.cs
+C:\Users\rosept\Documents\GitHub\AFU-JP-Installer\obj\Debug\net6.0\JPInstaller.csproj.CoreCompileInputs.cache
+C:\Users\rosept\Documents\GitHub\AFU-JP-Installer\obj\Debug\net6.0\JPInstaller.sourcelink.json
+C:\Users\rosept\Documents\GitHub\AFU-JP-Installer\obj\Debug\net6.0\JPInstaller.dll
+C:\Users\rosept\Documents\GitHub\AFU-JP-Installer\obj\Debug\net6.0\refint\JPInstaller.dll
+C:\Users\rosept\Documents\GitHub\AFU-JP-Installer\obj\Debug\net6.0\JPInstaller.pdb
+C:\Users\rosept\Documents\GitHub\AFU-JP-Installer\obj\Debug\net6.0\ref\JPInstaller.dll

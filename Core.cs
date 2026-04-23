@@ -27,7 +27,7 @@ namespace JPInstaller
             public static void Postfix(PhotonController __instance, PhotonHashtable properties)
             {   
                 Melon<Core>.Logger.Msg("detected SetCurrentRoomProperties");
-
+                /*
                 string test_key = "buh";
                 int test_value = 999;
                 Il2CppSystem.Object test_key_boxed = test_key;
@@ -37,8 +37,15 @@ namespace JPInstaller
                 
             
                 properties.Add(new Il2CppSystem.Int32 {m_value = 999}.BoxIl2CppObject(), test_value_boxed);
+                */
                 //Melon<Core>.Logger.Msg(__instance.FrameData.Count);
-                
+                foreach (Il2CppSystem.Collections.DictionaryEntry dict in properties)
+                {
+                    string converted_string = dict.Key.Cast<Il2CppSystem.String>();
+                    Melon<Core>.Logger.Msg(converted_string);
+                    Melon<Core>.Logger.Msg(dict.Value.Unbox<int>());
+                    
+                }
             }
         }
 
@@ -56,11 +63,7 @@ namespace JPInstaller
                     //Melon<Core>.Logger.Msg($"{dict.player} : {dict}");
                     
                 }
-                foreach (Il2CppSystem.Collections.DictionaryEntry dict in properties)
-                {
-                    Melon<Core>.Logger.Msg(dict.Value.Unbox<int>());
-                    
-                }
+                
             }
         }
 
