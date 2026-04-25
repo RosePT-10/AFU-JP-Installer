@@ -15,6 +15,7 @@ using Il2CppSystem.Threading.Tasks;
 using Il2CppInterop.Runtime.Runtime;
 using System.Runtime.CompilerServices;
 using Il2CppQuantum_Game;
+using Il2CppView_Traffic;
 
 [assembly: MelonInfo(typeof(JPInstaller.Core), "JPInstaller", "1.0.0", "RosePT-10", null)]
 [assembly: MelonGame("Videocult", "Airframe")]
@@ -23,76 +24,6 @@ namespace JPInstaller
 {
     public class Core : MelonMod
     {
-        //          the great post-syntax hell purge:
-        /*
-        [HarmonyPatch(typeof(PhotonController), "SetCurrentRoomProperties")]
-        private static class AddToRoomProperties
-        {
-            public static void Postfix(PhotonController __instance, PhotonHashtable properties)
-            {   
-                Melon<Core>.Logger.Msg("detected SetCurrentRoomProperties");
-                
-                //Il2CppSystem.Object test_key_boxed = new Il2CppSystem.String("buh");
-                Il2CppSystem.String buh = "buh";
-                Il2CppSystem.Object test_key_boxed_2 = buh;
-
-                Il2CppSystem.Int32 test_value = default;
-                System.Runtime.CompilerServices.Unsafe.AsRef(in test_value.m_value) = 99999;
-                Il2CppSystem.Object test_value_boxed = test_value.BoxIl2CppObject();
-            
-                properties.Add(test_key_boxed_2, test_value_boxed);
-                
-                foreach (Il2CppSystem.Collections.DictionaryEntry dict in properties)
-                {
-                    string converted_string = dict.Key.ToString();
-                    Melon<Core>.Logger.Msg(converted_string);
-
-                    switch(dict.Value.GetIl2CppType().Name){
-                        case "Int32":
-                            Melon<Core>.Logger.Msg(dict.Value.Unbox<int>());
-                            break;
-                        case "Boolean":
-                            Melon<Core>.Logger.Msg(dict.Value.Unbox<bool>());
-                            break;
-                    }
-
-                    Melon<Core>.Logger.Msg("-----------------");
-                    
-                    
-                }
-                //Melon<Core>.Logger.Msg(__instance.FrameData.Count);
-                
-            }
-        }
-
-        [HarmonyPatch(typeof(PhotonController), "GetCurrentRoomProperties")]
-        private static class ReadRoomProperties
-        {
-            public static void Postfix(PhotonController __instance, PhotonHashtable __result)
-            {
-                Melon<Core>.Logger.Msg("detected GetCurrentRoomProperties");
-                
-                foreach (Il2CppSystem.Collections.DictionaryEntry dict in __result)
-                {
-                    string converted_string = dict.Key.ToString();
-                    Melon<Core>.Logger.Msg(converted_string);
-
-                    switch(dict.Value.GetIl2CppType().Name){
-                        case "Int32":
-                            Melon<Core>.Logger.Msg(dict.Value.Unbox<int>());
-                            break;
-                        case "Boolean":
-                            Melon<Core>.Logger.Msg(dict.Value.Unbox<bool>());
-                            break;
-                    }
-
-                    Melon<Core>.Logger.Msg("-----------------");
-                
-                    
-                }
-            }
-        }
-        */
         [HarmonyPatch(typeof(BikeRespawnSystem), "SpawnBike")]
         private class DisableAllRacingInhibitors
         {
