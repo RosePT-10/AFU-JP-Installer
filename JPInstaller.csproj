@@ -28,6 +28,6 @@
 	</ItemGroup>
 	
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<Exec Command="COPY &quot;$(TargetPath)&quot; &quot;d:\_AIRFRAME ULTRA\Airframe Ultra Beta4 Cracked Updated Multiplayer\Airframe Ultra Playtest_20251219 - BETA 4 - REV3 -MAPLOADER -16Players\Mods&quot;" />
+		<Exec Command="COPY &quot;$(TargetPath)&quot; &quot;d:\_AIRFRAME ULTRA\AFU Beta4 Modded Updated Multiplayer\Mods&quot;" />
 	</Target>
 </Project>

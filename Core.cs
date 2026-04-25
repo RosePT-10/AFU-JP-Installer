@@ -22,6 +22,10 @@ using Il2CppView_Traffic;
 
 namespace JPInstaller
 {
+    public class ModdedGameManager : MonoBehaviour
+    {
+        public Dictionary<String, Dictionary<string, bool>> modList; 
+    }
     public class Core : MelonMod
     {
         [HarmonyPatch(typeof(BikeRespawnSystem), "SpawnBike")]
@@ -37,6 +41,7 @@ namespace JPInstaller
                 f.GetAllEntityRefs(all_Erefs);
                 // grab all objects
                 UnityEngine.Object airplane_object = UnityEngine.Object.FindAnyObjectByType<Airplane_View>();
+                GameObject airplane_gameobject;
                 
                 // check each Eref against all game objects to filter Erefs to just airplanes
                 if (airplane_object != null)
@@ -46,6 +51,14 @@ namespace JPInstaller
                         if (eref.ToString() == airplane_object.name)
                         {
                             Melon<Core>.Logger.Msg("airplane already exisits! not making a new airplane!");
+                            airplane_gameobject = GameObject.Find(airplane_object.name);
+                            airplane_gameobject.AddComponent<ModdedGameManager>();
+                            Dictionary<string, bool> buhConfig = new Dictionary<string, bool>();
+                            buhConfig.Add("is_buhEnabled", true);
+
+                            //userModList.Add("buh", buhConfig);
+                            
+                            airplane_gameobject.AddComponent<ModdedGameManager>().modList.Add("buh", buhConfig);
                         }
                     }
                 }
@@ -56,15 +69,30 @@ namespace JPInstaller
                     // now create if it does not exist
                     EntityRef airPlane_ref = f.Create(f.GameConfig().airPlane);
                     Melon<Core>.Logger.Msg("Plane created with ID: " + airPlane_ref);
+                    
+            
+                    // mess with pathIndex
                     Airplane airPlane_comp = f.Get<Airplane>(airPlane_ref);
-                    airPlane_comp.pathIndex = 69696969;
+                    airPlane_comp.pathIndex = 99999;
                     f.Set(airPlane_ref, airPlane_comp);
+
+                    // mess with components
+                    /*
+                    //Dictionary<String, Dictionary<string, bool>> userModList = new Dictionary<String, Dictionary<string, bool>>();
+                    Dictionary<string, bool> buhConfig = new Dictionary<string, bool>();
+                    buhConfig.Add("is_buhEnabled", true);
+
+                    //userModList.Add("buh", buhConfig);
+                    
+                    airplane_object.AddComponent<ModdedGameManager>().modList.Add("buh", buhConfig);
+                    */
+
                 }
                 
 
                 //                      ***** reading the shared data through a plane *****
 
-                Airplane discovered_airplane;
+                ModdedGameManager discovered_airplane;
 
                 // check each Eref against all game objects to filter Erefs to just airplanes
                 if (airplane_object != null)
@@ -75,9 +103,18 @@ namespace JPInstaller
                         {
                             // read airplane data
                             Melon<Core>.Logger.Msg("airplane exisits!");
-                            discovered_airplane = f.Get<Airplane>(eref);
+                            discovered_airplane = f.Get<ModdedGameManager>(eref);
                             Melon<Core>.Logger.Msg("Plane found with id: " + eref.ToString());
-                            Melon<Core>.Logger.Msg(discovered_airplane.pathIndex);
+                            foreach (System.Collections.Generic.KeyValuePair<string, System.Collections.Generic.Dictionary<string, bool>> mod in discovered_airplane.modList)
+                            {
+                                Melon<Core>.Logger.Msg("Mod name is: ", mod.Key);
+                                Melon<Core>.Logger.Msg("Below is the config options:");
+                                foreach (System.Collections.Generic.KeyValuePair<string, bool> mod_config in mod.Value)
+                                {
+                                    Melon<Core>.Logger.Msg($"{mod_config.Value}: {mod_config.Key}");
+                                }
+                            }
+                            
                         }
                     }
                 }
