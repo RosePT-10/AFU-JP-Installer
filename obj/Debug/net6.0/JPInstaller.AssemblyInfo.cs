@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JPInstaller")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c733167904aa9624a106263d25c484c46dc206ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+846794d41240e62b5a853ad87705c40fa1353378")]
 [assembly: System.Reflection.AssemblyProductAttribute("JPInstaller")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JPInstaller")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
