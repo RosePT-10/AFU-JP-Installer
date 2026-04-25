@@ -22,6 +22,8 @@ namespace JPInstaller
 {
     public class Core : MelonMod
     {
+        //          the great post-syntax hell purge:
+        /*
         [HarmonyPatch(typeof(PhotonController), "SetCurrentRoomProperties")]
         private static class AddToRoomProperties
         {
@@ -38,7 +40,7 @@ namespace JPInstaller
                 Il2CppSystem.Object test_value_boxed = test_value.BoxIl2CppObject();
             
                 properties.Add(test_key_boxed_2, test_value_boxed);
-                /*
+                
                 foreach (Il2CppSystem.Collections.DictionaryEntry dict in properties)
                 {
                     string converted_string = dict.Key.ToString();
@@ -58,7 +60,7 @@ namespace JPInstaller
                     
                 }
                 //Melon<Core>.Logger.Msg(__instance.FrameData.Count);
-                */
+                
             }
         }
 
@@ -89,7 +91,7 @@ namespace JPInstaller
                 }
             }
         }
-
+        */
         public override void OnInitializeMelon()
         {
             LoggerInstance.Msg("Initialized.");
